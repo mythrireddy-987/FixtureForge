@@ -1,0 +1,299 @@
+/* GENERAL STYLING */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Segoe UI', Arial, sans-serif;
+background: #f1f5f9;
+color: #1e293b;
+}
+
+/* HEADER */
+header {
+background: linear-gradient(135deg, #0f172a, #1e40af);
+color: white;
+text-align: center;
+padding: 35px 20px;
+}
+
+header h1 {
+font-size: 38px;
+margin-bottom: 8px;
+}
+
+header p {
+color: #cbd5e1;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+background: #172554;
+padding: 15px;
+display: flex;
+justify-content: center;
+gap: 45px;
+flex-wrap: wrap;
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.navbar a:hover {
+color: #93c5fd;
+}
+
+/* MAIN CONTENT */
+main {
+max-width: 1100px;
+margin: 35px auto;
+padding: 0 20px;
+}
+
+/* SECTION STYLING */
+.dashboard-section,
+.team-section,
+.fixture-section,
+.route-section {
+background: white;
+padding: 25px;
+margin-bottom: 25px;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+color: #1e3a8a;
+margin-bottom: 20px;
+font-size: 23px;
+}
+
+/* DASHBOARD CARDS */
+.dashboard-cards {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.dashboard-card {
+background: linear-gradient(135deg, #eff6ff, #dbeafe);
+padding: 25px;
+border-radius: 10px;
+text-align: center;
+border-bottom: 4px solid #2563eb;
+}
+
+.dashboard-card h3 {
+color: #475569;
+font-size: 16px;
+margin-bottom: 12px;
+}
+
+.dashboard-card p {
+color: #1d4ed8;
+font-size: 32px;
+font-weight: bold;
+}
+
+/* TEAM INPUT */
+input {
+width: 70%;
+padding: 12px;
+border: 1px solid #cbd5e1;
+border-radius: 7px;
+font-size: 15px;
+outline: none;
+}
+
+input:focus {
+border-color: #2563eb;
+}
+
+/* BUTTONS */
+button {
+background: #2563eb;
+color: white;
+border: none;
+padding: 12px 18px;
+border-radius: 7px;
+cursor: pointer;
+font-size: 14px;
+font-weight: 600;
+margin-left: 5px;
+transition: 0.3s;
+}
+
+button:hover {
+background: #1e40af;
+}
+
+/* TEAM LIST */
+#teamList {
+margin-top: 20px;
+list-style: none;
+}
+
+#teamList li {
+background: #eff6ff;
+padding: 12px 15px;
+margin-bottom: 10px;
+border-radius: 7px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* REMOVE BUTTON */
+#teamList li button {
+background: #dc2626;
+}
+
+#teamList li button:hover {
+background: #991b1b;
+}
+
+/* GENERATE FIXTURES BUTTON */
+.fixture-section > button {
+margin-bottom: 20px;
+background: #16a34a;
+}
+
+.fixture-section > button:hover {
+background: #15803d;
+}
+
+/* FIXTURE CARDS */
+.fixture-card {
+background: linear-gradient(135deg, #eff6ff, #ffffff);
+border-left: 5px solid #2563eb;
+padding: 20px;
+margin-bottom: 15px;
+border-radius: 9px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.fixture-card h3 {
+color: #1e40af;
+margin-bottom: 12px;
+}
+
+.fixture-card p {
+margin: 8px 0;
+}
+
+/* =====================================
+STADIUM TRAVEL ROUTE PLANNER
+===================================== */
+
+.route-section > p {
+color: #64748b;
+margin-bottom: 22px;
+line-height: 1.6;
+}
+
+.route-section label {
+display: block;
+font-weight: 600;
+margin-bottom: 8px;
+color: #334155;
+}
+
+.route-section select {
+width: 100%;
+max-width: 450px;
+padding: 12px;
+border: 1px solid #cbd5e1;
+border-radius: 7px;
+background: #f8fafc;
+font-size: 15px;
+color: #1e293b;
+outline: none;
+}
+
+.route-section select:focus {
+border-color: #2563eb;
+}
+
+.route-section > button {
+background: #2563eb;
+margin: 10px 0 20px;
+}
+
+.route-section > button:hover {
+background: #1e40af;
+}
+
+/* ROUTE RESULTS */
+#routeResults {
+margin-top: 20px;
+}
+
+#routeResults h3 {
+color: #1e3a8a;
+margin-bottom: 15px;
+}
+
+.route-result-card {
+background: linear-gradient(135deg, #eff6ff, #ffffff);
+border-left: 5px solid #2563eb;
+padding: 20px;
+margin-bottom: 15px;
+border-radius: 9px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.route-result-card h4 {
+color: #1e40af;
+font-size: 18px;
+margin-bottom: 12px;
+}
+
+.route-result-card p {
+margin: 9px 0;
+line-height: 1.5;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+
+header h1 {
+    font-size: 30px;
+}
+
+.navbar {
+    gap: 18px;
+}
+
+.dashboard-cards {
+    grid-template-columns: 1fr;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+main {
+    padding: 0 12px;
+}
+
+.route-section select {
+    max-width: 100%;
+}
+
+.route-result-card {
+    padding: 15px;
+}
+
+}

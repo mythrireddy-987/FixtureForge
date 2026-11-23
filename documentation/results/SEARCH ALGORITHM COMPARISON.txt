@@ -1,0 +1,10 @@
+SEARCH ALGORITHM COMPARISON
+----------------------------------------------------------------------------------------------------
+Algorithm           Route                         Path Cost      Nodes          Time (seconds)
+----------------------------------------------------------------------------------------------------
+BFS                 Stadium A -> Stadium B -> Stadium D18             3              0.00002510
+DFS                 Stadium A -> Stadium B -> Stadium D18             3              0.00000680
+UCS                 Stadium A -> Stadium C -> Stadium D8              2              0.00001090
+Greedy              Stadium A -> Stadium C -> Stadium D8              2              0.00000830
+A* Heuristic 1      Stadium A -> Stadium C -> Stadium D8              2              0.00000750
+A* Heuristic 2      Stadium A -> Stadium C -> Stadium D8              2              0.00000420

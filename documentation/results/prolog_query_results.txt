@@ -1,0 +1,40 @@
+FixtureForge – Prolog Query Testing Results
+
+1. Objective
+
+To test the Prolog knowledge base in "league_rules.pl" and verify that the fixture scheduling rules are responding correctly.
+
+2. Test Results
+
+No.| Prolog Query| Actual Result
+1| "team(rcb)."| TRUE
+2| "valid_match(m1)."| TRUE
+3| "no_venue_conflict(m1,m2)."| TRUE
+4| "sufficient_rest(m1,m2)."| TRUE
+5| "participating_team(rcb,m1)."| TRUE
+6| "scheduled_on(m1,1)."| TRUE
+7| "scheduled_at(m1,10)."| TRUE
+8| "played_at(m1,stadium_a)."| TRUE
+9| "valid_venue(m1)."| TRUE
+10| "assigned_venue(m1,stadium_a)."| TRUE
+11| "participating_team(csk,m1)."| TRUE
+12| "valid_match(m2)."| TRUE
+13| "valid_match(m3)."| TRUE
+14| "valid_match(m4)."| TRUE
+15| "valid_match(m5)."| TRUE
+16| "valid_match(m6)."| TRUE
+17| "team(csk)."| TRUE
+18| "team(mi)."| TRUE
+19| "team(kkr)."| TRUE (confirm if needed)
+20| "team(unknown)."| FALSE
+
+3. Errors Observed
+
+- "participating_team(rcb)." produced an unknown-procedure error because the predicate requires two arguments.
+- "assigned_venue(m1)." produced an unknown-procedure error because the predicate requires two arguments.
+
+4. Conclusion
+
+The Prolog knowledge base successfully answered the tested team, match, venue, and scheduling queries. The negative test for an unknown team returned FALSE as expected.
+
+The tests also helped identify predicates that require two arguments.

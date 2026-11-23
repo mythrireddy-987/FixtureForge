@@ -1,0 +1,20 @@
+DOMAIN REDUCTION EXPERIMENT RESULTS
+
+Initial Domains:
+Match 1: 12 possible values
+Match 2: 12 possible values
+Match 3: 12 possible values
+
+After Forward Checking:
+Match 1: 12 possible values
+Match 2: 4 possible values
+Match 3: 4 possible values
+
+After AC-3:
+Match 1: 8 possible values
+Match 2: 8 possible values
+Match 3: 8 possible values
+
+Conclusion:
+Forward Checking and AC-3 reduced the possible values
+in the fixture scheduling problem.

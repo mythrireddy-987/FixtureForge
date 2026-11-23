@@ -1,0 +1,13 @@
+BACKTRACKING COMPARISON RESULTS
+
+Method      Backtracks      Execution Time (seconds)
+Plain       0               0.037907
+MRV         0               0.001076
+Degree      0               0.000716
+LCV         0               0.046119
+
+Conclusion:
+All four methods successfully generated a valid fixture schedule.
+No backtracking was required for this test case.
+Execution times varied across the methods.
+The experiment uses a simplified comparison without domain reduction.

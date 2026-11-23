@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FixtureForge - Sports Fixture Scheduler</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head><body><!-- HEADER -->
+<header>
+    <h1>FixtureForge</h1>
+    <p>Smart Sports Fixture Scheduler</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#teams">Manage Teams</a>
+    <a href="#fixtures">Fixtures</a>
+    <a href="#routePlanner">Travel Route Planner</a>
+</nav>
+
+<main>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="dashboard-section">
+
+        <h2>Dashboard Overview</h2>
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h3>Total Teams</h3>
+                <p id="totalTeams">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Total Matches</h3>
+                <p id="totalMatches">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Available Venues</h3>
+                <p id="totalVenues">3</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MANAGE TEAMS -->
+    <section id="teams" class="team-section">
+
+        <h2>Manage Teams</h2>
+
+        <input
+            type="text"
+            id="teamName"
+            placeholder="Enter team name"
+        >
+
+        <button type="button" onclick="addTeam()">
+            Add Team
+        </button>
+
+        <ul id="teamList"></ul>
+
+    </section>
+
+    <!-- FIXTURES -->
+    <section id="fixtures" class="fixture-section">
+
+        <h2>Generate Fixtures</h2>
+
+        <button type="button" onclick="generateFixtures()">
+            Generate Fixtures
+        </button>
+
+        <button
+            type="button"
+            onclick="downloadFixtures()"
+            class="download-btn"
+        >
+            Download Fixtures as PDF
+        </button>
+
+        <div id="validationMessage"></div>
+
+        <div id="fixtureList"></div>
+
+    </section>
+
+    <!-- STADIUM TRAVEL ROUTE PLANNER -->
+    <section id="routePlanner" class="route-section">
+
+        <h2>Stadium Travel Route Planner</h2>
+
+        <p>Find and compare routes between stadiums using AI search algorithms.</p>
+
+        <label for="startStadium">Starting Stadium:</label>
+
+        <select id="startStadium">
+            <option value="Stadium A">Stadium A</option>
+            <option value="Stadium B">Stadium B</option>
+            <option value="Stadium C">Stadium C</option>
+            <option value="Stadium D">Stadium D</option>
+        </select>
+
+        <br><br>
+
+        <label for="goalStadium">Destination Stadium:</label>
+
+        <select id="goalStadium">
+            <option value="Stadium D">Stadium D</option>
+            <option value="Stadium A">Stadium A</option>
+            <option value="Stadium B">Stadium B</option>
+            <option value="Stadium C">Stadium C</option>
+        </select>
+
+        <br><br>
+
+        <label for="searchAlgorithm">Select Search Algorithm:</label>
+
+        <select id="searchAlgorithm">
+            <option value="all">Compare All Algorithms</option>
+            <option value="BFS">Breadth First Search (BFS)</option>
+            <option value="DFS">Depth First Search (DFS)</option>
+            <option value="UCS">Uniform Cost Search (UCS)</option>
+            <option value="Greedy">Greedy Best First Search</option>
+            <option value="A*">A* Search</option>
+        </select>
+
+        <br><br>
+
+        <button type="button" onclick="findRoute()">
+            Find Route
+        </button>
+
+        <div id="routeResults"></div>
+
+    </section>
+
+</main>
+
+<!-- JAVASCRIPT -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>
